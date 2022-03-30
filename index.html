@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Valida Formulário</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="main">
+            <form method="POST" action="/pagina2.html" target="_blank">
+                <fieldset class="tabela">
+                    <legend>Dados Pessoais</legend>
+                    <div class="main2">
+                        <label>
+                            <strong>Primeiro Nome:</strong><br />
+                            <input id="user-name" type="text" name="name" placeholder="Seu nome" minlength="2"><br />
+                            <small class="campovazio1">Por favor, este campo precisa ser preenchido!</small>
+                        </label><br />
+
+                        <label>
+                            <strong>Sobrenome:</strong><br />
+                            <input id="lastname" type="text" placeholder="Seu sobrenome" name="lastname"><br />
+                        </label><br />
+                        <label>
+                            <strong>E-mail:</strong><br />
+                            <input id="email" type="text" placeholder="E-mail" name="email"><br />
+                            <small class="campovazio3">Por favor, este campo precisa ser
+                                preenchido!</small>
+                        </label><br />
+
+                        <label>
+                            <strong>Idade:</strong><br />
+                            <input id="age" type="number" placeholder="Sua idade (min 12anos)" name="age"
+                                min="12"><br />
+                            <small class="campovazio4">Por favor, este campo precisa ser preenchido! E idade minima 12 !
+                                anos</small>
+                        </label><br />
+                        <label>
+                            <strong>Gênero:</strong><br />
+                            <select onblur="sel()" id="genero">
+                                <option value="" disabled selected>selecione</option>
+                                <option value="masculino">masc</option>
+                                <option value="feminino">fem</option>
+                                <option value="não declarado">não declarar</option>
+                            </select>
+                            <small class="campovazio5">Por favor, marque uma opção!</small>
+                        </label>
+                        <br />
+
+                        <input onclick="cadastro()" id="input-btn" type="button" value="Cadastrar">
+                    </div>
+
+
+
+                    <div class="main3">
+                        <img src="img/user.png" id="user1" class="imagem"><br />
+
+                        <label>
+                            <small>Nome:</small>
+                            <input type="text" id="res-name" disabled>
+                        </label>
+                        <label>
+                            <small>Sobrenome:</small>
+                            <input type="text" id="res-sobrenome" disabled>
+                        </label>
+                        <label>
+                            <small>E-mail:</small>
+                            <input type="text" id="res-email" disabled>
+                        </label>
+                        <label>
+                            <small>Idade:</small>
+                            <input type="text" id="res-age" disabled>
+                        </label>
+                        <label>
+                            <small>Gênero </small>
+                            <input type="text" id="res-genre" disabled>
+                        </label>
+
+                    </div>
+                </fieldset>
+            </form>
+
+
+        </div>
+    </section>
+    <script src="/index.js"></script>
+</body>
+
+</html>
